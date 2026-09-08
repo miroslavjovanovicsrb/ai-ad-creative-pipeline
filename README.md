@@ -1,16 +1,72 @@
-### Dokumentation
-Toolstack: Python (Jupyter Notebook), Pandas, OpenAI API (GPT-4o).
-## Vorgehensweise:
-# Daten-Setup: 
-Erstellung einer Basisliste mit Headlines (Fokus: Solar & Finanzen) und Bild-Prompts.
+# AI Ad Creative Pipeline
 
-# AI-Optimierung: 
-Über die OpenAI API wurden die Headlines automatisiert in zwei psychologische Varianten (Emotional & Benefit-getrieben) übersetzt. Die Bild-Ideen wurden technisch für Bild-KIs (DALL-E/Midjourney) präzisiert.
+AI-powered pipeline that automates the creation and optimization of ad creatives:
+headlines are optimized via the **OpenAI API (GPT-4o)** into two psychological variants
+(emotional & benefit-driven), image ideas are technically refined for image AIs
+(DALL-E / Midjourney), and everything is combined into a structured test matrix.
 
-# Matrix-Generierung: 
-Mittels eines Cross-Joins wurde jede Headline-Variante mit jedem optimierten Prompt kombiniert, um eine strukturierte Test-Basis zu erhalten.
+## The Problem
 
-# Erweiterbarkeit für den Produktivbetrieb:
-Direkte Anbindung an die Airtable API, um Ergebnisse ohne manuellen CSV-Import zu synchronisieren.
-Integration von DALL-E 3, um die Visuals direkt im Workflow zu generieren.
-Implementierung eines Approval-Schritts (z.B. via Slack), bevor die Creatives in den Ad Manager geladen werden.
+Creating ad variations for A/B testing is manual, slow and unstructured. This pipeline
+turns a raw list of headlines and image ideas into a complete, ready-to-test creative
+matrix — in minutes instead of hours.
+
+## How It Works
+
+1. **Data setup** — base list of headlines (focus: solar & finance topics) with
+   corresponding image prompts
+2. **AI optimization (OpenAI API, GPT-4o)** —
+   - Headlines automatically rewritten into two psychological variants:
+     *emotional* and *benefit-driven*
+   - Image ideas technically refined into precise prompts for image AIs
+     (DALL-E / Midjourney)
+3. **Matrix generation** — cross-join of every headline variant with every optimized
+   image prompt → structured, complete test basis
+4. **Production-ready extensibility** —
+   - Direct sync to Airtable API (no manual CSV import)
+   - DALL-E 3 integration to generate visuals inside the workflow
+   - Approval step (e.g. via Slack) before creatives go live in the ad manager
+
+## Tech Stack
+
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![OpenAI](https://img.shields.io/badge/-OpenAI%20API%20(GPT--4o)-412991?style=flat-square&logo=openai&logoColor=white)
+![Pandas](https://img.shields.io/badge/-pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+
+## Example
+
+| Original Headline | Variant: Emotional | Variant: Benefit |
+|---|---|---|
+| *„Cut your energy bill"* | *„Stop watching your hard-earned money disappear into the grid"* | *„Save up to 40% on your monthly energy bill"* |
+
+*(→ combined with optimized image prompts into a full test matrix)*
+
+## Getting Started
+
+```bash
+git clone https://github.com/miroslavjovanovicsrb/automation-task.git
+cd automation-task
+pip install -r requirements.txt
+jupyter notebook
+```
+
+> Note: An `OPENAI_API_KEY` environment variable is required to run the optimization step.
+
+## Project Structure
+
+```
+automation-task/
+├── notebooks/            # pipeline notebooks
+├── data/                 # input headlines & image prompts
+├── output/               # generated matrices
+├── requirements.txt
+└── README.md
+```
+
+## Author
+
+**Miroslav Jovanovic** — Python Backend & AI Engineer
+[LinkedIn](https://www.linkedin.com/in/miroslav-jovanovic-python) ·
+[GitHub](https://github.com/miroslavjovanovicsrb)
+
