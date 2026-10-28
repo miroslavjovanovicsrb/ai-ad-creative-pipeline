@@ -22,7 +22,7 @@ matrix — in minutes instead of hours.
      (DALL-E / Midjourney)
 3. **Matrix generation** — cross-join of every headline variant with every optimized
    image prompt → structured, complete test basis
-4. **Production-ready extensibility** —
+4. **Possible extensions** —
    - Direct sync to Airtable API (no manual CSV import)
    - DALL-E 3 integration to generate visuals inside the workflow
    - Approval step (e.g. via Slack) before creatives go live in the ad manager
@@ -45,8 +45,8 @@ matrix — in minutes instead of hours.
 ## Getting Started
 
 ```bash
-git clone https://github.com/miroslavjovanovicsrb/automation-task.git
-cd automation-task
+git clone https://github.com/miroslavjovanovicsrb/ai-ad-creative-pipeline.git
+cd ai-ad-creative-pipeline
 pip install -r requirements.txt
 jupyter notebook
 ```
@@ -56,7 +56,7 @@ jupyter notebook
 ## Project Structure
 
 ```
-automation-task/
+ai-ad-creative-pipeline/
 ├── notebooks/            # pipeline notebooks
 ├── data/                 # input headlines & image prompts
 ├── output/               # generated matrices
@@ -69,4 +69,3 @@ automation-task/
 **Miroslav Jovanovic** — Python Backend & AI Engineer
 [LinkedIn](https://www.linkedin.com/in/miroslav-jovanovic-python) ·
 [GitHub](https://github.com/miroslavjovanovicsrb)
-
